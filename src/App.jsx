@@ -13,7 +13,7 @@ const App = () => {
     e.preventDefault();
     try {
       const parsedData = JSON.parse(jsonInput);
-      const response = await axios.post("http://localhost:3000/bfhl", parsedData);
+      const response = await axios.post("https://deploybackend-pnvw.onrender.com/bfhl", parsedData);
       setResponseData(response.data);
       setFilteredData(response.data); // Initially show full response
     } catch (error) {
